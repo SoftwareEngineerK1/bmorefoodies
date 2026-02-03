@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ice-Free Cocktail List | Bmore Foodies</title>
+  <link rel="stylesheet" href="../../styleopt1.css" />
+  <style>
+    body { margin:0; background:#f5f6f8; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 16px; }
+    .topnav { margin-bottom: 18px; color:#444; }
+    .topnav a { color:#111; text-decoration:none; font-weight:600; }
+
+    .header {
+      background:#fff; border-radius:16px; padding:22px;
+      box-shadow: 0 10px 20px rgba(0,0,0,.08);
+      margin-bottom: 22px;
+    }
+    .header h1 { margin:0 0 6px; font-size: clamp(24px, 3vw, 40px); }
+    .header p { margin:0; color:#555; }
+
+    .gallery {
+      display:grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items:start;
+    }
+    .gallery .cocktail-card { width:100%; max-width:none; margin:0; }
+
+    .btn {
+      display:inline-block;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="topnav">
+      <a href="../../homepage.html">Home</a> /
+      <a href="../cocktailoptions.html">Cocktail Ideas</a> /
+      Ice-Free
+    </div>
+
+    <section class="header">
+      <h1>Ice-Free Cocktails</h1>
+      <p>No ice needed — cozy, warm, and room-temp friendly recipes. Click a card to view the full recipe.</p>
+    </section>
+
+    <main class="gallery">
+
+      <!-- 1) Mulled Red Wine Royale (file name requested: RedRedWine.html) -->
+      <div class="cocktail-card">
+        <div class="card-image">
+          <img src="../../images/RedRedWine.jpg" alt="Mulled Red Wine Royale" />
+        </div>
+        <div class="card-content">
+          <span class="category">Ice-Free</span>
+          <h2 class="cocktail-title">Mulled Red Wine Royale</h2>
+          <p class="description">Warm spiced red wine with orange + aromatics, finished with brandy.</p>
+          <a class="btn" href="RedRedWine.html">View Recipe</a>
+        </div>
+      </div>
+
+      <!-- 2) Spiced Honey Apple Toddy -->
+      <div class="cocktail-card">
+        <div class="card-image">
+          <img src="../../images/SpicedHoneyAppleToddy.jpg" alt="Spiced Honey Apple Toddy" />
+        </div>
+        <div class="card-content">
+          <span class="category">Ice-Free</span>
+          <h2 class="cocktail-title">Spiced Honey Apple Toddy</h2>
+          <p class="description">Bourbon (or dark rum) + hot apple cider + honey — cozy and easy.</p>
+          <a class="btn" href="SpicedHoneyAppleToddy.html">View Recipe</a>
+        </div>
+      </div>
+
+      <!-- 3) Sake & Plum Wine -->
+      <div class="cocktail-card">
+        <div class="card-image">
+          <img src="../../images/SakePlumWine.jpg" alt="Sake & Plum Wine" />
+        </div>
+        <div class="card-content">
+          <span class="category">Ice-Free</span>
+          <h2 class="cocktail-title">Sake &amp; Plum Wine (Umeshu)</h2>
+          <p class="description">A simple room-temp mix highlighting fruity plum notes and clean junmai sake.</p>
+          <a class="btn" href="SakePlumWine.html">View Recipe</a>
+
+        </div>
+      </div>
+
+<!-- 4) Jamaican Jerk Hot Buttered Rum -->
+<div class="cocktail-card">
+  <div class="card-image">
+    <img src="../../images/JamaicanJerkHotButteredRum.jpg" alt="Jamaican Jerk Hot Buttered Rum" />
+  </div>
+  <div class="card-content">
+    <span class="category">Ice-Free</span>
+    <h2 class="cocktail-title">Jamaican Jerk Hot Buttered Rum</h2>
+    <p class="description">A spicy, savory-sweet hot buttered rum with Jamaican jerk warmth.</p>
+    <a class="btn" href="JamaicanJerkHotButteredRum.html">View Recipe</a>
+  </div>
+</div>
+
+    </main>
+  </div>
+
+</body>
+</html>
