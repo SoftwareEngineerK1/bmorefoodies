@@ -17,26 +17,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="main-header">
-    <div class="container nav-container">
-        <div class="logo">
-            <a href="/" style="text-decoration: none; color: inherit;">BMORE FOODIES</a>
+        <div class="container nav-container">
+            <a href="/" class="brand-link">
+                <span class="logo-text">BMORE FOODIES</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="work.html">Work With Us</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <nav>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="#explore">Explore</a></li>
-                <li><a href="work.html">Work With Us</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <section class="hero">
         <div class="hero-content">
@@ -47,23 +48,45 @@
     </section>
 
     <main class="container section" id="explore">
-        <h2>Recent Baltimore Discoveries</h2>
+        <h2>Latest Reviews</h2>
         <div class="grid">
+            
             <article class="card">
-                <div class="card-img-placeholder" style="background: url('https://images.unsplash.com/photo-1571115177098-24ec42ed2bb4?q=80&w=400') center/cover;"></div>
+                <div class="card-img-placeholder" style="background: url('https://images.unsplash.com/photo-1571115177098-24ec42ed2bb4?q=80&w=400') center/cover;">
+                    <span class="badge">Crab Cakes</span>
+                </div>
                 <div class="card-content">
-                    <h3>The Harbor Guide</h3>
-                    <p>Where to find authentic vibes away from the tourist traps.</p>
-                    <a href="#" class="read-more">View Full Review →</a>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.5/5</span>
+                    </div>
+                    <h3>Locust Point Spot</h3>
+                    <p>The perfect blend of Old Bay and zero filler. A hidden gem for locals.</p>
+                    <a href="#" class="read-more">Read Full Breakdown →</a>
                 </div>
             </article>
+
         </div>
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2026 BMORE Foodies. Built in the 410.</p>
+        <div class="container">
+            <div class="footer-brand">BMORE FOODIES</div>
+            <p>Mapping the Flavor of the 410</p>
+            
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <p class="copyright">&copy; 2026 BMORE Foodies. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
-
 </html>
