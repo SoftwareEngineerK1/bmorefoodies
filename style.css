@@ -28,7 +28,7 @@ body {
 .main-header {
   background-color: var(--deep-navy);
   color: var(--white);
-  padding: 0.75rem 0;
+  padding: 0.5rem 0; /* Reduced padding for logo fit */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -43,7 +43,9 @@ body {
 
 .brand-link {
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  align-items: center; /* Keeps image and text centered */
+  gap: 12px;
   transition: transform 0.2s ease;
 }
 
@@ -51,9 +53,15 @@ body {
   transform: scale(1.02);
 }
 
+.logo-img {
+  height: 50px; /* Adjust based on your logo design */
+  width: auto;
+  display: block;
+}
+
 .logo-text {
   font-family: var(--header-font);
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: var(--primary-gold);
   letter-spacing: 2px;
   line-height: 1;
