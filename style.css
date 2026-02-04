@@ -1,28 +1,17 @@
-/* BMORE FOODIES - Official Stylesheet 
-  Theme: Vintage-Modern Maryland
-*/
-
 :root {
-  /* Brand Colors */
   --primary-gold: #F2B705;
   --deep-navy: #003865;
   --maryland-red: #BD1622;
   --sky-blue: #48A9D6;
-  
-  /* Neutral Palette */
   --vintage-parchment: #DEDCB3; 
   --obsidian: #1A1A1A;
   --white: #FFFFFF;
 
-  /* Typography */
   --header-font: 'Bebas Neue', sans-serif;
   --body-font: 'Inter', sans-serif;
 }
 
-/* Base Reset */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -33,13 +22,9 @@ body {
   line-height: 1.6;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* Header & Navigation Alignment */
+/* Header & Nav */
 .main-header {
   background-color: var(--deep-navy);
   color: var(--white);
@@ -47,50 +32,44 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 4px solid var(--maryland-red); /* Maryland Red accent line */
+  border-bottom: 4px solid var(--maryland-red);
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between; /* Pushes Logo to left, Nav to right */
-  align-items: center;           /* Centers them vertically */
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo a {
+.brand-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
   font-family: var(--header-font);
   font-size: 2.5rem;
   color: var(--primary-gold);
   letter-spacing: 2px;
-  text-decoration: none;
-  line-height: 1;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+.nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+.nav-links a { 
+  color: var(--white); 
+  text-decoration: none; 
+  font-family: var(--header-font); 
+  font-size: 1.3rem; 
+  text-transform: uppercase; 
 }
+.nav-links a:hover { color: var(--primary-gold); }
 
-.nav-links a {
-  color: var(--white);
-  text-decoration: none;
-  font-family: var(--header-font);
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: var(--primary-gold);
-}
-
-/* Hero Section */
+/* Hero */
 .hero {
   background: linear-gradient(rgba(0, 56, 101, 0.8), rgba(0, 56, 101, 0.8)), 
               url('https://images.unsplash.com/photo-1571115177098-24ec42ed2bb4?q=80&w=1200') no-repeat center center/cover;
-  height: 60vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,116 +78,76 @@ body {
   border-bottom: 8px solid var(--primary-gold);
 }
 
-.hero h1 {
-  font-family: var(--header-font);
-  font-size: 4.5rem;
-  margin: 0;
-  color: var(--primary-gold);
-  text-shadow: 2px 2px 0px var(--obsidian);
+.hero h1 { font-family: var(--header-font); font-size: 4rem; margin: 0; color: var(--primary-gold); }
+
+/* Review Components */
+.section { padding: 60px 0; }
+h2 { font-family: var(--header-font); font-size: 3rem; text-align: center; color: var(--deep-navy); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.card {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 2px;
+  box-shadow: 8px 8px 0px var(--deep-navy);
+  position: relative;
 }
 
-.hero p {
-  font-size: 1.4rem;
-  max-width: 600px;
-  margin: 10px auto 25px;
+.card-img-placeholder { 
+  height: 220px; 
+  margin-bottom: 15px; 
+  border-radius: 2px; 
+  position: relative;
 }
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--maryland-red);
+  color: white;
+  padding: 5px 12px;
+  font-family: var(--header-font);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.rating {
+  color: var(--primary-gold);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.rating span {
+  color: var(--obsidian);
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+.card h3 { font-family: var(--header-font); font-size: 1.8rem; margin: 10px 0; }
+.read-more { color: var(--maryland-red); font-weight: bold; text-decoration: none; display: block; margin-top: 10px; }
+
+/* Footer */
+.main-footer { background: var(--obsidian); color: var(--white); text-align: center; padding: 50px 0; margin-top: 60px; }
+.footer-brand { font-family: var(--header-font); font-size: 2rem; color: var(--primary-gold); }
+.social-links { display: flex; justify-content: center; gap: 20px; margin: 20px 0; }
+.social-links a { color: var(--white); font-size: 1.5rem; transition: 0.3s; }
+.social-links a:hover { color: var(--primary-gold); transform: translateY(-3px); }
 
 /* Buttons */
 .btn-primary {
   display: inline-block;
   background-color: var(--primary-gold);
   color: var(--deep-navy);
-  padding: 15px 35px;
+  padding: 12px 28px;
   text-decoration: none;
   font-family: var(--header-font);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 4px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
 }
 
-.btn-primary:hover {
-  background-color: var(--white);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Grid & Cards */
-.section {
-  padding: 80px 0;
-}
-
-h2 {
-  font-family: var(--header-font);
-  font-size: 3rem;
-  color: var(--deep-navy);
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-}
-
-.card {
-  background: var(--white);
-  padding: 20px;
-  border-radius: 2px;
-  border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 8px 8px 0px var(--deep-navy); /* Bold vintage shadow */
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 12px 12px 0px var(--maryland-red);
-}
-
-.card h3 {
-  font-family: var(--header-font);
-  font-size: 1.8rem;
-  margin: 15px 0 10px;
-}
-
-/* Forms (Work Page) */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  border: 2px solid var(--deep-navy);
-  background: var(--white);
-  font-family: var(--body-font);
-  font-size: 1rem;
-}
-
-/* Footer */
-.main-footer {
-  background: var(--obsidian);
-  color: var(--white);
-  text-align: center;
-  padding: 50px 20px;
-  margin-top: 100px;
-}
-
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-  }
+  .nav-container { flex-direction: column; gap: 15px; }
+  .hero h1 { font-size: 3rem; }
 }
