@@ -157,3 +157,97 @@ body {
 .cat-item:hover i, .cat-item:hover span {
     color: var(--white);
 }
+
+/* Clock Layout Styles */
+.clock-page-body {
+    background-color: var(--obsidian); /* Dark background makes the gold pop */
+    overflow-x: hidden;
+}
+
+.clock-container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.clock-wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 2px dashed rgba(242, 183, 5, 0.2); /* Subtle ring */
+    border-radius: 50%;
+}
+
+.clock-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.clock-center img {
+    width: 150px; /* Bigger center logo */
+    filter: drop-shadow(0 0 15px var(--primary-gold));
+}
+
+.clock-item {
+    position: absolute;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    transition: all 0.3s ease;
+    width: 120px;
+    text-align: center;
+}
+
+.clock-item i {
+    font-size: 2rem;
+    color: var(--primary-gold);
+    margin-bottom: 5px;
+}
+
+.clock-item span {
+    font-family: var(--header-font);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.clock-item:hover {
+    transform: scale(1.2);
+    color: var(--primary-gold);
+}
+
+/* Positioning the items like a clock face */
+.pos-12 { top: 0%; left: 50%; transform: translate(-50%, -100%); }
+.pos-1  { top: 15%; left: 85%; transform: translate(-50%, -50%); }
+.pos-3  { top: 50%; left: 110%; transform: translate(-50%, -50%); }
+.pos-4  { top: 85%; left: 85%; transform: translate(-50%, -50%); }
+.pos-6  { top: 100%; left: 50%; transform: translate(-50%, 0%); }
+.pos-7  { top: 85%; left: 15%; transform: translate(-50%, -50%); }
+.pos-9  { top: 50%; left: -10%; transform: translate(-50%, -50%); }
+.pos-10 { top: 15%; left: 15%; transform: translate(-50%, -50%); }
+
+.clock-title {
+    font-family: var(--header-font);
+    color: var(--primary-gold);
+    font-size: 4rem;
+    margin-top: 50px;
+    text-shadow: 2px 2px var(--maryland-red);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .clock-wrapper { width: 300px; height: 300px; }
+    .clock-center img { width: 100px; }
+    .clock-item span { font-size: 0.9rem; }
+    .clock-item i { font-size: 1.5rem; }
+    .pos-3 { left: 105%; }
+    .pos-9 { left: -5%; }
+}
+
