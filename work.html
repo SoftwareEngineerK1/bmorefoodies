@@ -3,42 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work With BMORE Foodies</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Work With Us | BMORE Foodies</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="main-header" style="border-bottom: 4px solid var(--maryland-red);">
-        <nav class="container">
-            <div class="logo">BMORE FOODIES</div>
-            <a href="index.html" style="color:white; text-decoration:none; font-family:var(--header-font);">← Back Home</a>
-        </nav>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-link">
+                <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo" class="logo-img">
+                <span class="logo-text">BMORE FOODIES</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="work.html">Work With Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="container section">
-        <h1>Partner With Us</h1>
-        <p style="font-size: 1.2rem; max-width: 700px; margin-bottom: 40px;">We combine professional storytelling with tech-driven analytics to showcase the best of Baltimore's food scene.</p>
+    <section class="hero-small">
+        <div class="hero-content">
+            <h1>Collaborate with BMORE Foodies</h1>
+            <p>Let's tell the story of your food and brand to the 410.</p>
+        </div>
+    </section>
 
-        <div class="grid">
-            <div class="card p-2">
+    <main class="container section">
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-camera"></i>
                 <h3>Content Creation</h3>
-                <p>High-quality vertical video (Reels/TikTok) and professional photography tailored for your brand.</p>
+                <p>High-quality reels, photos, and TikToks showcasing your best dishes.</p>
             </div>
-            <div class="card p-2">
-                <h3>Digital Presence</h3>
-                <p>Featured placement on bmorefoodies.com with SEO optimization to help locals find your venue.</p>
+            <div class="service-card">
+                <i class="fas fa-pen-nib"></i>
+                <h3>Honest Reviews</h3>
+                <p>In-depth blog features and social shoutouts for authentic engagement.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Event Coverage</h3>
+                <p>Live coverage of grand openings, pop-ups, and festivals.</p>
             </div>
         </div>
 
-        <section class="contact-form-container">
-            <h2>Send an Inquiry</h2>
-            <form action="#" method="POST" class="contact-form">
-                <input type="text" placeholder="Venue Name" required>
-                <input type="email" placeholder="Contact Email" required>
-                <textarea placeholder="Tell us about your project or event..." required></textarea>
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <p style="text-align:center;">Fill out the form below and I'll get back to you within 48 hours.</p>
+            
+            <form action="https://formspree.io/f/your-id-here" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Business Name</label>
+                    <input type="text" name="business" placeholder="The Crab Shack">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>How can we work together?</label>
+                    <textarea name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                </div>
                 <button type="submit" class="btn-primary">Send Message</button>
             </form>
-        </section>
+        </div>
     </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-brand">BMORE FOODIES</div>
+            <p>Mapping the Flavor of the 410</p>
+            <div class="social-links">
+                <a href="https://instagram.com/bmorefoodies_" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@bmorefoodies_" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com/@bmorefoodies" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 BMORE Foodies. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
