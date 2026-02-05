@@ -6,77 +6,74 @@
   --vintage-parchment: #DEDCB3; 
   --obsidian: #1A1A1A;
   --white: #FFFFFF;
-
   --header-font: 'Bebas Neue', sans-serif;
   --body-font: 'Inter', sans-serif;
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: var(--vintage-parchment);
   color: var(--obsidian);
   font-family: var(--body-font);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* Header */
+/* Header & Nav */
 .main-header {
   background-color: var(--deep-navy);
-  color: var(--white);
   padding: 0.5rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
   border-bottom: 4px solid var(--maryland-red);
 }
-
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
-
-.brand-link { text-decoration: none; display: flex; align-items: center; gap: 12px; transition: 0.2s; }
-.logo-img { height: 50px; width: auto; display: block; }
+.brand-link { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+.logo-img { height: 50px; width: auto; }
 .logo-text { font-family: var(--header-font); font-size: 2.2rem; color: var(--primary-gold); letter-spacing: 2px; }
-
 .nav-links { list-style: none; display: flex; gap: 30px; }
 .nav-links a { color: var(--white); text-decoration: none; font-family: var(--header-font); font-size: 1.3rem; text-transform: uppercase; transition: 0.3s; }
 .nav-links a:hover { color: var(--primary-gold); }
 
-/* Hero */
-.hero {
-  background: linear-gradient(rgba(0, 56, 101, 0.8), rgba(0, 56, 101, 0.8)), 
-              url('https://images.unsplash.com/photo-1571115177098-24ec42ed2bb4?q=80&w=1200') no-repeat center center/cover;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--white);
-  border-bottom: 8px solid var(--primary-gold);
-}
-.hero h1 { font-family: var(--header-font); font-size: 4rem; margin: 0; color: var(--primary-gold); }
-
-/* Clock Logic (Everything Baltimore Page) */
-.clock-page-body { background-color: var(--obsidian); overflow-x: hidden; }
+/* --- CLOCK ARCHITECTURE --- */
+.clock-page-body { background-color: var(--obsidian); }
 
 .clock-container {
     min-height: 100vh;
-    padding-top: 100px; /* Prevents top item from touching nav */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 100px 20px;
     position: relative;
 }
 
-.clock-wrapper { position: relative; width: 500px; height: 500px; }
+/* Flexbox keeps the Logo (clock-center) perfectly in the middle */
+.clock-wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.clock-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; cursor: pointer; }
-.clock-center img { width: 150px; animation: pulse-glow 3s infinite ease-in-out; }
+.clock-center {
+    position: relative; 
+    z-index: 10;
+}
 
+.clock-center img {
+    width: 150px;
+    height: auto;
+    animation: pulse-simple 3s infinite ease-in-out;
+}
+
+/* Absolute items orbit the flex center */
 .clock-item {
     position: absolute;
     text-decoration: none;
@@ -85,18 +82,16 @@ body {
     align-items: center;
     color: var(--white);
     transition: all 0.3s ease;
-    width: 140px;
+    width: 130px;
     text-align: center;
+    z-index: 5;
 }
-.clock-item i { font-size: 2rem; color: var(--primary-gold); margin-bottom: 5px; }
+
+.clock-item i { font-size: 2.2rem; color: var(--primary-gold); margin-bottom: 5px; }
 .clock-item span { font-family: var(--header-font); font-size: 1.2rem; letter-spacing: 1px; }
 
-/* Sub-page Specific Colors */
-.sub-page .clock-item i, .sub-page .clock-item span { color: var(--sky-blue); }
-.sub-page .clock-item.active i, .sub-page .clock-item.active span { color: var(--primary-gold); }
-
-/* Positional "Hours" */
-.pos-12 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+/* Positional Coordinates */
+.pos-12 { top: 0; left: 50%; transform: translate(-50%, -50%); }
 .pos-1  { top: 15%; left: 85%; transform: translate(-50%, -50%); }
 .pos-3  { top: 50%; left: 100%; transform: translate(-50%, -50%); }
 .pos-4  { top: 85%; left: 85%; transform: translate(-50%, -50%); }
@@ -105,15 +100,26 @@ body {
 .pos-9  { top: 50%; left: 0%; transform: translate(-50%, -50%); }
 .pos-10 { top: 15%; left: 15%; transform: translate(-50%, -50%); }
 
-.clock-title { font-family: var(--header-font); color: var(--primary-gold); font-size: 4rem; margin-top: 40px; text-shadow: 2px 2px var(--maryland-red); }
+/* Sub-page Color Logic */
+.sub-page .clock-item i, .sub-page .clock-item span { color: var(--sky-blue); }
+.sub-page .clock-item.active i, .sub-page .clock-item.active span { color: var(--primary-gold); }
 
 /* Animations */
-@keyframes pulse-glow {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); filter: drop-shadow(0 0 5px var(--primary-gold)); }
-    50% { transform: translate(-50%, -50%) scale(1.05); filter: drop-shadow(0 0 20px var(--primary-gold)); }
+@keyframes pulse-simple {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px var(--primary-gold)); }
+    50% { transform: scale(1.08); filter: drop-shadow(0 0 15px var(--primary-gold)); }
 }
 
 @keyframes flash { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.clock-title { 
+    font-family: var(--header-font); 
+    color: var(--primary-gold); 
+    font-size: 4rem; 
+    margin-top: 50px; 
+    text-shadow: 2px 2px var(--maryland-red); 
+    text-align: center;
+}
 
 .coming-soon {
     font-family: var(--header-font);
@@ -124,37 +130,21 @@ body {
     margin-top: 10px;
 }
 
-/* Sub-page Background Particles */
-.sub-page .clock-container::before {
-    content: "";
-    position: absolute;
-    top: -50%; left: -50%; width: 200%; height: 200%;
-    background-image: radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 40px);
-    background-size: 400px 400px;
-    animation: backgroundMove 100s linear infinite;
-    opacity: 0.2;
-    z-index: 0;
-}
-@keyframes backgroundMove { from { transform: translate(0,0); } to { transform: translate(-200px, -200px); } }
-
 /* Footer */
-.main-footer { background: var(--obsidian); color: var(--white); text-align: center; padding: 50px 0; margin-top: 60px; }
+.main-footer { background: #000; color: var(--white); text-align: center; padding: 50px 0; }
 .footer-brand { font-family: var(--header-font); font-size: 2rem; color: var(--primary-gold); }
 .social-links { display: flex; justify-content: center; gap: 25px; margin: 20px 0; }
-.social-links a { color: var(--white); font-size: 1.8rem; }
+.social-links a { color: var(--white); font-size: 1.8rem; transition: 0.3s; }
+.social-links a:hover { color: var(--primary-gold); }
 
-/* Grid Cards */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { background: var(--white); padding: 15px; box-shadow: 8px 8px 0px var(--deep-navy); }
-.badge { background: var(--maryland-red); color: white; padding: 5px 10px; font-family: var(--header-font); }
-.btn-primary { background: var(--primary-gold); color: var(--deep-navy); padding: 10px 20px; text-decoration: none; font-family: var(--header-font); font-size: 1.2rem; display: inline-block; }
-
-/* Mobile */
+/* Mobile Viewport Fixes */
 @media (max-width: 768px) {
-    .nav-container { flex-direction: column; }
     .clock-wrapper { width: 300px; height: 300px; }
-    .clock-center img { width: 100px; }
-    .clock-item { width: 100px; }
-    .clock-item span { font-size: 0.8rem; }
-    .clock-title { font-size: 2.5rem; text-align: center; }
+    .clock-center img { width: 90px; }
+    .clock-item { width: 90px; }
+    .clock-item i { font-size: 1.6rem; }
+    .clock-item span { font-size: 0.9rem; }
+    .clock-title { font-size: 2.5rem; width: 100%; }
+    .nav-links { gap: 15px; }
+    .logo-text { font-size: 1.5rem; }
 }
