@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktails & Mocktails | BMORE Foodies</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,58 +16,93 @@
     <header class="main-header">
         <div class="container nav-container">
             <a href="index.html" class="brand-link">
-                <img src="images/logo.png" alt="BMORE Foodies Logo" class="logo-img">
+                <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo" class="logo-img">
                 <span class="logo-text">BMORE FOODIES</span>
             </a>
-            <nav>
+             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="baltimore.html">Everything Baltimore</a></li>
+			<li><a href="baltimore.html">Everything Baltimore</a></li>
+			<li><a href="explore_baltimore.html">Explore Baltimore</a></li>
                     <li><a href="work.html">Work With Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="category-header">
-            <div class="container">
-                <h1 style="font-family: var(--header-font); font-size: 4.5rem; color: var(--primary-gold); margin-bottom: 15px;">Cocktails & Mocktails</h1>
-                <p style="color: var(--white); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-                    Welcome! Explore curated cocktail recipe cards and themed drink ideas — perfect for parties, game day, and celebrations.
-                </p>
+    <section class="category-header" style="background: linear-gradient(rgba(0,56,101,0.8), rgba(0,56,101,0.8)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1200') center/cover; padding: 80px 0; text-align: center; border-bottom: 6px solid var(--maryland-red);">
+        <div class="container">
+            <h1 style="font-family: var(--header-font); font-size: 4.5rem; color: var(--primary-gold); margin-bottom: 15px;">Cocktails & Mocktails</h1>
+            <p style="color: var(--white); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                Welcome! Explore curated cocktail recipe cards and themed drink ideas — perfect for parties, game day, and celebrations.
+            </p>
+        </div>
+    </section>
 
-                <div class="clock-wrapper">
-                    <div class="clock-center">
-                        <img src="images/logo.png" alt="BMORE Foodies Center Logo">
-                    </div>
+    <main class="container" style="padding: 60px 20px;">
+        
+        <section class="featured-collection" style="margin-bottom: 80px; background: #fdfdfd; padding: 40px; border: 2px dashed var(--maryland-red); border-radius: 8px;">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-family: var(--header-font); font-size: 3rem; color: var(--deep-navy);">Featured Collection</h2>
+                <p style="font-weight: bold; color: var(--maryland-red); text-transform: uppercase; letter-spacing: 1px;">Check out our Super Bowl LX Cocktail Ideas</p>
+                <p>Six fun, crowd-pleasing recipes to elevate your watch party.</p>
+            </div>
 
-                    <a href="classic_cocktails.html" class="clock-item pillar-pos-n">
-                        <i class="fas fa-glass-martini-alt"></i>
-                        <span>Classic Cocktails</span>
-                    </a>
-
-                    <a href="signature_cocktails.html" class="clock-item pillar-pos-ne">
-                        <i class="fas fa-star"></i>
-                        <span>Signature Drinks</span>
-                    </a>
-
-                    <a href="wine.html" class="clock-item pillar-pos-e">
-                        <i class="fas fa-wine-glass"></i>
-                        <span>Wine & Bubbles</span>
-                    </a>
-
-                    <a href="themed_seasonal.html" class="clock-item pillar-pos-s">
-                        <i class="fas fa-reindeer"></i>
-                        <span>Themed & Seasonal</span>
-                    </a>
-
-                    <a href="mocktails.html" class="clock-item pillar-pos-w">
-                        <i class="fas fa-mortal-kombat"></i> <span>Mocktails (Zero Proof)</span>
-                    </a>
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                
+                <div class="recipe-card" style="background: var(--white); border: 1px solid #eee; padding: 20px; text-align: center; box-shadow: 4px 4px 0px var(--deep-navy);">
+                    <i class="fas fa-football-ball" style="color: #002244; font-size: 2rem; margin-bottom: 10px;"></i>
+                    <h4 style="font-family: var(--header-font); font-size: 1.5rem;">The Patriot</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px;">Red, white, and blue layers for the ultimate fan.</p>
+                    <a href="#" style="color: var(--maryland-red); font-weight: bold; text-decoration: none; font-size: 0.9rem;">Get Recipe →</a>
                 </div>
+
+                <div class="recipe-card" style="background: var(--white); border: 1px solid #eee; padding: 20px; text-align: center; box-shadow: 4px 4px 0px var(--deep-navy);">
+                    <i class="fas fa-bolt" style="color: #69BE28; font-size: 2rem; margin-bottom: 10px;"></i>
+                    <h4 style="font-family: var(--header-font); font-size: 1.5rem;">The Seahawk</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px;">A neon-green citrus blast that hits hard.</p>
+                    <a href="#" style="color: var(--maryland-red); font-weight: bold; text-decoration: none; font-size: 0.9rem;">Get Recipe →</a>
+                </div>
+
+                <div class="recipe-card" style="background: var(--white); border: 1px solid #eee; padding: 20px; text-align: center; box-shadow: 4px 4px 0px var(--deep-navy);">
+                    <i class="fas fa-rabbit" style="color: #ff69b4; font-size: 2rem; margin-bottom: 10px;"></i>
+                    <h4 style="font-family: var(--header-font); font-size: 1.5rem;">Bad Bunny Heat</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px;">Tropical vibes with a spicy rim for half-time energy.</p>
+                    <a href="#" style="color: var(--maryland-red); font-weight: bold; text-decoration: none; font-size: 0.9rem;">Get Recipe →</a>
+                </div>
+
+                <div class="recipe-card" style="background: var(--white); border: 1px solid #eee; padding: 20px; text-align: center; box-shadow: 4px 4px 0px var(--deep-navy);">
+                    <i class="fas fa-tint-slash" style="color: var(--sky-blue); font-size: 2rem; margin-bottom: 10px;"></i>
+                    <h4 style="font-family: var(--header-font); font-size: 1.5rem;">Ice-Free Chiller</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px;">Maximum flavor, zero dilution. Perfectly chilled.</p>
+                    <a href="#" style="color: var(--maryland-red); font-weight: bold; text-decoration: none; font-size: 0.9rem;">Get Recipe →</a>
+                </div>
+
             </div>
         </section>
+
+        <h2 style="font-family: var(--header-font); font-size: 2.5rem; margin-bottom: 30px; border-left: 8px solid var(--primary-gold); padding-left: 15px;">Classic Recipes & Inspiration</h2>
+        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            
+            <article class="listing-card" style="background: var(--white); border: 1px solid #ddd; box-shadow: 6px 6px 0px var(--deep-navy);">
+                <div style="height: 200px; background: #eee url('https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=400') center/cover;"></div>
+                <div style="padding: 20px;">
+                    <h3 style="font-family: var(--header-font); font-size: 1.8rem; margin-bottom: 10px;">The Bmore Mule</h3>
+                    <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">A local twist on the classic copper-mug favorite using Maryland-distilled spirits.</p>
+                    <a href="#" style="background: var(--maryland-red); color: white; padding: 8px 15px; text-decoration: none; font-family: var(--header-font); font-size: 1rem;">View Card</a>
+                </div>
+            </article>
+
+            <article class="listing-card" style="background: var(--white); border: 1px solid #ddd; box-shadow: 6px 6px 0px var(--deep-navy);">
+                <div style="height: 200px; background: #eee url('https://images.unsplash.com/photo-1595981267035-7b04ca84a810?auto=format&fit=crop&q=80&w=400') center/cover;"></div>
+                <div style="padding: 20px;">
+                    <h3 style="font-family: var(--header-font); font-size: 1.8rem; margin-bottom: 10px;">Midnight Mocktail</h3>
+                    <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">Refreshing blackberry and basil infusion for those looking for zero-proof sophistication.</p>
+                    <a href="#" style="background: var(--maryland-red); color: white; padding: 8px 15px; text-decoration: none; font-family: var(--header-font); font-size: 1rem;">View Card</a>
+                </div>
+            </article>
+
+        </div>
     </main>
 
     <footer class="main-footer">
