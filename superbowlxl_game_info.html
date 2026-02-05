@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bowl LX Game Info | Patriots vs. Seahawks</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --patriots-blue: #002244;
+            --patriots-red: #C60C30;
+            --seahawks-navy: #002244;
+            --seahawks-green: #69BE28;
+            --gold: #B3995D;
+        }
+
+        /* Override body for this specific event page while keeping Master CSS footer/nav */
+        .event-page {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .event-hero {
+            background: linear-gradient(135deg, var(--patriots-blue) 0%, #111 50%, var(--seahawks-navy) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .event-container {
+            max-width: 1000px;
+            margin: -40px auto 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .matchup-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team h2 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; margin: 10px 0; }
+        .vs { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--gold); padding: 0 20px; }
+
+        .details-box {
+            background-color: #f9f9f9;
+            border-left: 5px solid var(--gold);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .stats-table th, .stats-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .halftime-shoutout {
+            background: #000;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 30px;
+            border: 2px solid var(--maryland-red);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--gold);
+            color: black;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="event-page">
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-link">
+                <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo" class="logo-img">
+                <span class="logo-text">BMORE FOODIES</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="baltimore.html">Everything Baltimore</a></li>
+                    <li><a href="explore_baltimore.html">Explore Baltimore</a></li>
+                    <li><a href="test_section.html">TEST SECTION</a></li>
+                    <li><a href="work.html">Work With Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="event-hero">
+        <div class="badge">NFL SEMIQUINCENTENNIAL (USA 250)</div>
+        <h1 style="font-family: 'Bebas Neue'; font-size: 5rem; letter-spacing: 4px;">SUPER BOWL LX</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">Sunday, February 8, 2026 • Levi's Stadium, Santa Clara, CA</p>
+    </section>
+
+    <div class="event-container">
+        <div class="matchup-grid">
+            <div class="team" style="color: var(--patriots-red);">
+                <h2>New England Patriots</h2>
+                <p><strong>AFC Champions (17-3)</strong></p>
+                <small>QB: Drake Maye</small>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team" style="color: var(--seahawks-green);">
+                <h2>Seattle Seahawks</h2>
+                <p><strong>NFC Champions (16-3)</strong></p>
+                <small>QB: Sam Darnold</small>
+            </div>
+        </div>
+
+        <div class="details-box">
+            <h3>Game Day Schedule</h3>
+            <ul style="list-style: none; padding-left: 0; margin-top: 10px;">
+                <li><i class="fas fa-clock" style="color: var(--gold);"></i> <strong>Kickoff:</strong> 6:30 PM EST</li>
+                <li><i class="fas fa-tv" style="color: var(--gold);"></i> <strong>Network:</strong> NBC, Peacock</li>
+                <li><i class="fas fa-microphone" style="color: var(--gold);"></i> <strong>National Anthem:</strong> Charlie Puth</li>
+                <li><i class="fas fa-ticket-alt" style="color: var(--gold);"></i> <strong>Line:</strong> Seahawks -4.5</li>
+            </ul>
+        </div>
+
+        <h3>Matchup Stats</h3>
+        <table class="stats-table">
+            <thead>
+                <tr style="background: #eee;">
+                    <th>Category</th>
+                    <th>Patriots</th>
+                    <th>Seahawks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Head Coach</strong></td>
+                    <td>Mike Vrabel</td>
+                    <td>Mike Macdonald</td>
+                </tr>
+                <tr>
+                    <td><strong>Offense</strong></td>
+                    <td>2nd Overall</td>
+                    <td>8th Overall</td>
+                </tr>
+                <tr>
+                    <td><strong>Defense</strong></td>
+                    <td>7th Overall</td>
+                    <td>1st Overall</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="halftime-shoutout">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 10px;">Apple Music Halftime Show</p>
+            <h2 style="color: #ff0055; font-family: 'Bebas Neue'; font-size: 4rem;">BAD BUNNY</h2>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-brand">BMORE FOODIES</div>
+            <div class="social-links">
+                <a href="https://instagram.com/bmorefoodies_" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@bmorefoodies_" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com/@bmorefoodies" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 BMORE Foodies. Official USA 250 Partner.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
