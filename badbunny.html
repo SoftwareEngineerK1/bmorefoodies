@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bowl LX Cocktails | BMORE Foodies</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .recipe-card-full {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .recipe-card-full:hover { transform: translateY(-10px); }
+        .card-content { padding: 25px; }
+        .category { 
+            display: inline-block;
+            color: var(--maryland-red); 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.8rem; 
+            margin-bottom: 10px;
+        }
+        .cocktail-title { font-family: var(--header-font); font-size: 2.2rem; margin-bottom: 10px; color: var(--deep-navy); }
+        .description { font-style: italic; color: #555; margin-bottom: 20px; font-size: 0.95rem; }
+        .details h3 { font-family: var(--header-font); font-size: 1.2rem; color: var(--obsidian); margin-bottom: 10px; border-bottom: 2px solid var(--primary-gold); display: inline-block; }
+        .ingredients ul, .instructions ol { font-size: 0.9rem; padding-left: 20px; margin-bottom: 20px; color: #444; }
+        .ingredients li { margin-bottom: 5px; }
+        .btn { 
+            display: block; 
+            text-align: center; 
+            background: var(--deep-navy); 
+            color: white; 
+            padding: 12px; 
+            text-decoration: none; 
+            font-family: var(--header-font); 
+            border-radius: 0 0 12px 12px; 
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--maryland-red); }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-link">
+                <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo" class="logo-img">
+                <span class="logo-text">BMORE FOODIES</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+		<li><a href="baltimore.html">Everything Baltimore</a></li>
+                    <li><a href="cocktails_mocktails.html">Cocktails</a></li>
+                    <li><a href="work.html">Work With Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="superbowl-hero" style="background: var(--deep-navy); text-align: center;">
+        <div class="container" style="padding: 0;">
+            <img src="images/superbowl_flyer.png" alt="Super Bowl LX 2026 Cocktail Collection" style="width: 100%; max-width: 900px; display: block; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+        </div>
+    </section>
+
+    <main class="container" style="padding: 60px 20px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-family: var(--header-font); font-size: 3.5rem;">Super Bowl LX: Bad Bunny Collection</h1>
+            <p>Six crowd-pleasing recipes. Here are the highlights from the Benito-inspired menu.</p>
+        </div>
+
+        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+            
+            <article class="recipe-card-full">
+                <div class="card-content">
+                    <span class="category">Bad Bunny 🐰</span>
+                    <h2 class="cocktail-title">Bad Johnnie</h2>
+                    <p class="description">Vibe: Tropical yet bold — like island energy in a glass.</p>
+                    <div class="details">
+                        <div class="ingredients">
+                            <h3>Ingredients</h3>
+                            <ul>
+                                <li>2 oz Johnnie Walker Black</li>
+                                <li>2 oz passion fruit juice</li>
+                                <li>3 oz coconut water</li>
+                                <li>Fresh lime wedge (garnish)</li>
+                            </ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>Instructions</h3>
+                            <ol>
+                                <li>Combine all ingredients in a shaker with ice.</li>
+                                <li>Stir gently, then strain into a chilled glass.</li>
+                                <li>Garnish with lime.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn" href="cocktails_mocktails.html">← Back to Cocktail List</a>
+            </article>
+
+            <article class="recipe-card-full">
+                <div class="card-content">
+                    <span class="category">Bad Bunny 🐰</span>
+                    <h2 class="cocktail-title">Dákiti Mule</h2>
+                    <p class="description">Vibe: Funky, fruity, and playful — named after his hit “Dákiti.”</p>
+                    <div class="details">
+                        <div class="ingredients">
+                            <h3>Ingredients</h3>
+                            <ul>
+                                <li>1.5 oz vodka</li>
+                                <li>1/2 oz lime juice</li>
+                                <li>1/2 oz passion fruit puree</li>
+                                <li>1/2 oz guava puree</li>
+                                <li>Ginger beer (to top)</li>
+                                <li>Lime wedge (garnish)</li>
+                            </ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>Instructions</h3>
+                            <ol>
+                                <li>In a copper mug, add vodka, lime, and fruit purees.</li>
+                                <li>Top with ginger beer.</li>
+                                <li>Stir gently and garnish with a lime wedge.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn" href="cocktails_mocktails.html">← Back to Cocktail List</a>
+            </article>
+
+            <article class="recipe-card-full">
+                <div class="card-content">
+                    <span class="category">Bad Bunny 🐰</span>
+                    <h2 class="cocktail-title">Hennessy de Coco</h2>
+                    <p class="description">Vibe: Sophisticated island spirit with Caribbean flair.</p>
+                    <div class="details">
+                        <div class="ingredients">
+                            <h3>Ingredients</h3>
+                            <ul>
+                                <li>1 oz Hennessy V.S.O.P.</li>
+                                <li>1 oz coconut water</li>
+                                <li>1/2 oz guava juice</li>
+                                <li>1/4 oz pineapple juice</li>
+                                <li>1/4 oz lemon juice</li>
+                                <li>Dash of simple syrup</li>
+                                <li>Pineapple leaves (garnish)</li>
+                            </ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>Instructions</h3>
+                            <ol>
+                                <li>Shake all ingredients with ice.</li>
+                                <li>Strain into a chilled glass.</li>
+                                <li>Garnish with pineapple leaves.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn" href="cocktails_mocktails.html">← Back to Cocktail List</a>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-brand">BMORE FOODIES</div>
+            <p class="copyright">&copy; 2026 BMORE Foodies. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
