@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMORE Foodies | Mapping the Flavor of the 410</title>
+    <title>BMORE Foodies | The 4 Pillars</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="clock-page-body">
 
     <header class="main-header">
         <div class="container nav-container">
@@ -20,70 +20,53 @@
                 <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo" class="logo-img">
                 <span class="logo-text">BMORE FOODIES</span>
             </a>
-            
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="baltimore.html">Everything Baltimore</a></li>
                     <li><a href="work.html">Work With Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="background: linear-gradient(rgba(0, 56, 101, 0.7), rgba(0, 56, 101, 0.7)), url('https://images.unsplash.com/photo-1571115177098-24ec42ed2bb4?q=80&w=1200') no-repeat center center/cover; height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); border-bottom: 8px solid var(--primary-gold);">
-        <div class="hero-content">
-            <h1 style="font-family: var(--header-font); font-size: clamp(3rem, 8vw, 5rem); margin: 0; color: var(--primary-gold); text-shadow: 3px 3px 0px var(--maryland-red);">Mapping the Flavor of the 410</h1>
-            <p style="font-size: 1.2rem; margin: 20px 0; max-width: 600px; margin-left: auto; margin-right: auto;">A software engineer's guide to Baltimore food, culture, and community.</p>
-            <a href="baltimore.html" class="btn-primary" style="padding: 15px 35px; font-size: 1.5rem;">Start Exploring</a>
-        </div>
-    </section>
+    <main class="clock-container">
+        <div class="clock-wrapper">
+            <div class="clock-center">
+                <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo">
+            </div>
 
-    <main class="container" style="padding: 60px 20px;">
-        <h2 style="font-family: var(--header-font); font-size: 3rem; color: var(--deep-navy); margin-bottom: 40px; border-left: 10px solid var(--maryland-red); padding-left: 20px;">Latest Reviews</h2>
+            <a href="eat_drink.html" class="clock-item pillar-pos-n">
+                <i class="fas fa-utensils"></i>
+                <span>Eat & Drink</span>
+            </a>
+
+            <a href="play_explore.html" class="clock-item pillar-pos-e">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Play & Explore</span>
+            </a>
+
+            <a href="things_to_do.html" class="clock-item pillar-pos-s">
+                <i class="fas fa-calendar-check"></i>
+                <span>Things To Do</span>
+            </a>
+
+            <a href="local_services.html" class="clock-item pillar-pos-w">
+                <i class="fas fa-concierge-bell"></i>
+                <span>Local Services</span>
+            </a>
+        </div>
         
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <article class="card" style="background: var(--white); padding: 15px; box-shadow: 8px 8px 0px var(--deep-navy); border: 1px solid #ddd;">
-                <div class="card-img" style="height: 200px; background: url('https://images.unsplash.com/photo-1539136788836-5699e78bac75?q=80&w=400') center/cover; position: relative;">
-                    <span class="badge" style="position: absolute; top: 10px; left: 10px; background: var(--maryland-red); color: white; padding: 5px 12px; font-family: var(--header-font);">Seafood</span>
-                </div>
-                <div class="card-content" style="padding: 20px 0;">
-                    <div class="rating" style="color: var(--primary-gold); margin-bottom: 10px;">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3 style="font-family: var(--header-font); font-size: 1.8rem; margin-bottom: 10px;">The Crab Shack Classic</h3>
-                    <p style="font-size: 0.95rem; color: #444; margin-bottom: 20px;">Checking out the best zero-filler crab cakes in the Inner Harbor area.</p>
-                    <a href="restaurants.html" class="read-more" style="color: var(--maryland-red); text-decoration: none; font-weight: bold; font-family: var(--header-font); font-size: 1.1rem;">Read Full Breakdown →</a>
-                </div>
-            </article>
-
-            <article class="card" style="background: var(--white); padding: 15px; box-shadow: 8px 8px 0px var(--deep-navy); border: 1px solid #ddd;">
-                <div class="card-img" style="height: 200px; background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=400') center/cover; position: relative;">
-                    <span class="badge" style="position: absolute; top: 10px; left: 10px; background: var(--maryland-red); color: white; padding: 5px 12px; font-family: var(--header-font);">Street Food</span>
-                </div>
-                <div class="card-content" style="padding: 20px 0;">
-                    <div class="rating" style="color: var(--primary-gold); margin-bottom: 10px;">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <h3 style="font-family: var(--header-font); font-size: 1.8rem; margin-bottom: 10px;">Fells Point Tacos</h3>
-                    <p style="font-size: 0.95rem; color: #444; margin-bottom: 20px;">A late-night staple that never misses. We dive into the authentic flavors of Broadway Market.</p>
-                    <a href="nightlife.html" class="read-more" style="color: var(--maryland-red); text-decoration: none; font-weight: bold; font-family: var(--header-font); font-size: 1.1rem;">See The Vibe →</a>
-                </div>
-            </article>
-        </div>
+        <h1 class="clock-title">Explore Baltimore</h1>
     </main>
 
     <footer class="main-footer">
         <div class="container">
             <div class="footer-brand">BMORE FOODIES</div>
-            <p>Mapping the Flavor of the 410</p>
-            
             <div class="social-links">
                 <a href="https://instagram.com/bmorefoodies_" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://tiktok.com/@bmorefoodies_" target="_blank"><i class="fab fa-tiktok"></i></a>
                 <a href="https://youtube.com/@bmorefoodies" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
-            
             <p class="copyright">&copy; 2026 BMORE Foodies. All rights reserved.</p>
         </div>
     </footer>
