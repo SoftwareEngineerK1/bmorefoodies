@@ -268,15 +268,6 @@ body {
 }
 
 
-/* --- CATEGORY HERO & CLOCK NAV --- */
-.category-header {
-    background: linear-gradient(rgba(0,56,101,0.85), rgba(0,56,101,0.85));
-    padding: 80px 0;
-    text-align: center; /* This centers the text H1 and P */
-    border-bottom: 6px solid var(--maryland-red);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* This ensures all flex items inside are centered */
-}
+
+
 
