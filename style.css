@@ -1,243 +1,231 @@
-/* --- Global Variables & Reset --- */
+/* --- ROOT VARIABLES --- */
 :root {
-    --primary-gold: #FFB81C;   /* Baltimore Gold */
-    --maryland-red: #E03A3E;   /* MD Flag Red */
-    --deep-navy: #002244;      /* Super Bowl LX / Patriots Navy */
-    --seattle-green: #69BE28;  /* Seahawks Action Green */
-    --obsidian: #101820;       /* Rich Black */
-    --sky-blue: #0076B6;
-    --light-gray: #f4f4f4;
-    --header-font: 'Bebas Neue', sans-serif;
-    --body-font: 'Inter', sans-serif;
+  --primary-gold: #F2B705;
+  --deep-navy: #003865;
+  --maryland-red: #BD1622;
+  --sky-blue: #48A9D6;
+  --vintage-parchment: #DEDCB3; 
+  --obsidian: #1A1A1A;
+  --white: #FFFFFF;
+  --header-font: 'Bebas Neue', sans-serif;
+  --body-font: 'Inter', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* --- RESET & BASE --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
 
 body {
+    background-color: var(--vintage-parchment);
+    color: var(--obsidian);
     font-family: var(--body-font);
     line-height: 1.6;
-    background-color: var(--light-gray);
-    color: var(--obsidian);
+    overflow-x: hidden;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
 }
 
-/* --- Navigation & Header --- */
+/* --- HEADER & NAVIGATION --- */
 .main-header {
-    background: white;
-    padding: 15px 0;
-    border-bottom: 3px solid var(--obsidian);
+    background-color: var(--deep-navy);
+    padding: 0.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 4px solid var(--maryland-red);
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
-.brand-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 12px;
+.brand-link { 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
 }
 
-.logo-img {
-    height: 50px;
-    width: auto;
+.logo-img { 
+    height: 50px; 
+    width: auto; 
 }
 
-.logo-text {
-    font-family: var(--header-font);
-    font-size: 1.8rem;
-    color: var(--obsidian);
-    letter-spacing: 1px;
+.logo-text { 
+    font-family: var(--header-font); 
+    font-size: 2.2rem; 
+    color: var(--primary-gold); 
+    letter-spacing: 2px; 
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 30px; 
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--obsidian);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    transition: color 0.3s;
+.nav-links a { 
+    color: var(--white); 
+    text-decoration: none; 
+    font-family: var(--header-font); 
+    font-size: 1.3rem; 
+    text-transform: uppercase; 
+    transition: 0.3s; 
 }
 
-.nav-links a:hover {
-    color: var(--maryland-red);
+.nav-links a:hover { 
+    color: var(--primary-gold); 
 }
 
-/* --- Super Bowl Hero Section --- */
-.superbowl-hero {
-    background: var(--deep-navy);
-    padding: 40px 0;
-    display: flex;
-    justify-content: center;
+/* --- CLOCK & PILLAR ARCHITECTURE --- */
+.clock-page-body { 
+    background-color: var(--obsidian); 
 }
 
-.superbowl-hero img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    border: 4px solid var(--primary-gold);
-}
-
-/* --- Recipe Grid & Cards --- */
-.section-divider {
-    margin: 80px 0 40px;
-    border-top: 5px solid var(--primary-gold);
-    padding-top: 20px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    margin-top: 30px;
-}
-
-.recipe-card-full {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
+.clock-container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    height: 100%;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.recipe-card-full:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 15px 45px rgba(0,0,0,0.15);
-}
-
-.card-image {
-    height: 220px;
-    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
     position: relative;
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* THE CENTER FIX: 
+   Flexbox on the wrapper keeps the logo mathematically centered 
+*/
+.clock-wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card-content {
-    padding: 30px;
-    flex-grow: 1;
+.clock-center {
+    position: relative; 
+    z-index: 10;
 }
 
-.category {
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--maryland-red);
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-    display: block;
+.clock-center img {
+    width: 150px;
+    height: auto;
+    animation: pulse-simple 3s infinite ease-in-out;
 }
 
-.cocktail-title {
-    font-family: var(--header-font);
-    font-size: 2.4rem;
-    line-height: 1;
-    margin-bottom: 12px;
-    color: var(--deep-navy);
-}
-
-.description {
-    font-size: 0.95rem;
-    color: #666;
-    font-style: italic;
-    margin-bottom: 25px;
-    border-left: 3px solid var(--primary-gold);
-    padding-left: 10px;
-}
-
-.details h3 {
-    font-family: var(--header-font);
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    color: var(--obsidian);
-}
-
-.ingredients ul {
-    list-style: none;
-    margin-bottom: 20px;
-}
-
-.ingredients li {
-    padding: 4px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 0.9rem;
-}
-
-.instructions ol {
-    padding-left: 18px;
-    font-size: 0.9rem;
-    color: #444;
-}
-
-.instructions li {
-    margin-bottom: 8px;
-}
-
-/* --- Buttons --- */
-.btn {
-    display: block;
-    width: 100%;
-    padding: 18px;
-    text-align: center;
-    background: var(--obsidian);
-    color: white;
+/* Base style for all floating navigation items */
+.clock-item {
+    position: absolute;
     text-decoration: none;
-    font-family: var(--header-font);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background 0.3s;
-    margin-top: auto; /* Pushes button to bottom of card */
-}
-
-.btn:hover {
-    background: var(--maryland-red);
-}
-
-/* --- Footer --- */
-.main-footer {
-    background: var(--obsidian);
-    color: white;
-    padding: 60px 0;
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    transition: all 0.3s ease;
+    width: 130px;
     text-align: center;
+    z-index: 5;
 }
 
-.footer-brand {
-    font-family: var(--header-font);
-    font-size: 2.5rem;
-    color: var(--primary-gold);
-    margin-bottom: 10px;
+.clock-item i { 
+    font-size: 2.2rem; 
+    color: var(--primary-gold); 
+    margin-bottom: 5px; 
+}
+
+.clock-item span { 
+    font-family: var(--header-font); 
+    font-size: 1.2rem; 
+    letter-spacing: 1px; 
+}
+
+.clock-item:hover {
+    transform: scale(1.1);
+    z-index: 15;
+}
+
+.clock-item:hover i {
+    color: var(--white);
+    filter: drop-shadow(0 0 10px var(--primary-gold));
+}
+
+/* --- POSITIONING SYSTEM --- */
+
+/* 4-Pillar Homepage Positions (N, E, S, W) */
+.pillar-pos-n { top: 0; left: 50%; transform: translate(-50%, -50%); }
+.pillar-pos-e { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+.pillar-pos-s { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+.pillar-pos-w { top: 50%; left: 0%; transform: translate(-50%, -50%); }
+
+/* 12-Point Clock Positions for Category Pages */
+.pos-12 { top: 0; left: 50%; transform: translate(-50%, -50%); }
+.pos-1  { top: 15%; left: 85%; transform: translate(-50%, -50%); }
+.pos-2  { top: 30%; left: 95%; transform: translate(-50%, -50%); }
+.pos-3  { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+.pos-4  { top: 85%; left: 85%; transform: translate(-50%, -50%); }
+.pos-6  { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+.pos-7  { top: 85%; left: 15%; transform: translate(-50%, -50%); }
+.pos-8  { top: 70%; left: 5%; transform: translate(-50%, -50%); }
+.pos-9  { top: 50%; left: 0%; transform: translate(-50%, -50%); }
+.pos-10 { top: 15%; left: 15%; transform: translate(-50%, -50%); }
+
+/* --- TEXT & ANIMATIONS --- */
+.clock-title { 
+    font-family: var(--header-font); 
+    color: var(--primary-gold); 
+    font-size: 4rem; 
+    margin-top: 60px; 
+    text-shadow: 2px 2px var(--maryland-red); 
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+@keyframes pulse-simple {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px var(--primary-gold)); }
+    50% { transform: scale(1.08); filter: drop-shadow(0 0 15px var(--primary-gold)); }
+}
+
+/* --- FOOTER --- */
+.main-footer { 
+    background: #000; 
+    color: var(--white); 
+    text-align: center; 
+    padding: 50px 0; 
+    border-top: 2px solid var(--deep-navy);
+}
+
+.footer-brand { 
+    font-family: var(--header-font); 
+    font-size: 2rem; 
+    color: var(--primary-gold); 
+}
+
+.social-links { 
+    display: flex; 
+    justify-content: center; 
+    gap: 25px; 
+    margin: 20px 0; 
+}
+
+.social-links a { 
+    color: var(--white); 
+    font-size: 1.8rem; 
+    transition: 0.3s; 
+}
+
+.social-links a:hover { 
+    color: var(--primary-gold); 
 }
 
 .copyright {
@@ -245,13 +233,31 @@ body {
     opacity: 0.6;
 }
 
-/* --- Mobile Adjustments --- */
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Consider a hamburger menu later */
+    .clock-wrapper { 
+        width: 300px; 
+        height: 300px; 
     }
-    
-    .cocktail-title {
-        font-size: 2rem;
+    .clock-center img { 
+        width: 100px; 
+    }
+    .clock-item { 
+        width: 100px; 
+    }
+    .clock-item i { 
+        font-size: 1.8rem; 
+    }
+    .clock-item span { 
+        font-size: 0.85rem; 
+    }
+    .clock-title { 
+        font-size: 2.5rem; 
+    }
+    .logo-text { 
+        font-size: 1.5rem; 
+    }
+    .nav-links { 
+        display: none; /* Consider a burger menu for production */
     }
 }
