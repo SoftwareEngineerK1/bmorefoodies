@@ -1,3 +1,5 @@
+/* BMORE FOODIES - Master Stylesheet (2026) */
+
 /* --- ROOT VARIABLES --- */
 :root {
   --primary-gold: #F2B705;
@@ -9,10 +11,6 @@
   --white: #FFFFFF;
   --header-font: 'Bebas Neue', sans-serif;
   --body-font: 'Inter', sans-serif;
-  
-  /* Super Bowl Specific Team Colors 2026 */
-  --patriots-blue: #002244;
-  --seattle-green: #69BE28;
 }
 
 /* --- RESET & BASE --- */
@@ -23,23 +21,34 @@
 }
 
 body {
-    background-color: var(--vintage-parchment); /* Default for recipe pages */
+    background-color: var(--vintage-parchment);
     color: var(--obsidian);
     font-family: var(--body-font);
     line-height: 1.6;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* FIX: This makes your index.html dark again */
+/* --- THEMES & CONTAINERS --- */
 .clock-page-body { 
     background-color: var(--obsidian); 
     color: var(--white);
 }
 
+/* Standard wide container for Nav/Footer */
 .container { 
     max-width: 1100px; 
     margin: 0 auto; 
     padding: 0 20px; 
+}
+
+/* NEW: Smaller container for focused content sections */
+.container-small {
+    max-width: 850px; /* Adjust this number to make it even smaller if desired */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* --- HEADER & NAVIGATION --- */
@@ -65,10 +74,7 @@ body {
     gap: 12px; 
 }
 
-.logo-img { 
-    height: 50px; 
-    width: auto; 
-}
+.logo-img { height: 50px; width: auto; }
 
 .logo-text { 
     font-family: var(--header-font); 
@@ -77,11 +83,7 @@ body {
     letter-spacing: 2px; 
 }
 
-.nav-links { 
-    list-style: none; 
-    display: flex; 
-    gap: 30px; 
-}
+.nav-links { list-style: none; display: flex; gap: 30px; }
 
 .nav-links a { 
     color: var(--white); 
@@ -92,19 +94,10 @@ body {
     transition: 0.3s; 
 }
 
-.nav-links a:hover { 
-    color: var(--primary-gold); 
-}
+.nav-links a:hover { color: var(--primary-gold); }
 
-/* --- CATEGORY HERO & CLOCK NAV --- */
-.category-header {
-    background: linear-gradient(rgba(0,56,101,0.85), rgba(0,56,101,0.85)), 
-                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1200') center/cover;
-    padding: 80px 0;
-    text-align: center;
-    border-bottom: 6px solid var(--maryland-red);
-    color: var(--white);
-}
+/* --- THE CLOCK NAVIGATION --- */
+.clock-container { padding: 40px 0; }
 
 .clock-wrapper {
     position: relative;
@@ -114,11 +107,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.clock-center {
-    position: relative; 
-    z-index: 10;
 }
 
 .clock-center img {
@@ -137,78 +125,48 @@ body {
     transition: all 0.3s ease;
     width: 130px;
     text-align: center;
-    z-index: 5;
 }
 
-.clock-item i { 
-    font-size: 2.2rem; 
-    color: var(--primary-gold); 
-    margin-bottom: 8px; 
+.clock-item i { font-size: 2.2rem; color: var(--primary-gold); margin-bottom: 8px; transition: 0.3s; }
+.clock-item span { font-family: var(--header-font); font-size: 1.2rem; }
+
+/* Active/Hover states */
+.clock-item.active-pillar i, .clock-item:hover i {
+    color: var(--maryland-red);
+    filter: drop-shadow(0 0 10px var(--maryland-red));
+    transform: scale(1.2);
 }
 
-.clock-item span { 
-    font-family: var(--header-font); 
-    font-size: 1.2rem; 
-    letter-spacing: 1px;
-    line-height: 1.1;
-}
+.clock-item.active-pillar span { color: var(--maryland-red); }
 
-.clock-item:hover {
-    transform: scale(1.1) translate(-50%, -50%);
-    z-index: 15;
-}
-
-.clock-item:hover i {
-    color: var(--white);
-    filter: drop-shadow(0 0 10px var(--primary-gold));
-}
-
-/* --- POSITIONING SYSTEM --- */
+/* Clock Positioning */
 .pillar-pos-n  { top: 0; left: 50%; transform: translate(-50%, -50%); }
-.pillar-pos-ne { top: 20%; left: 85%; transform: translate(-50%, -50%); }
 .pillar-pos-e  { top: 50%; left: 100%; transform: translate(-50%, -50%); }
 .pillar-pos-s  { top: 100%; left: 50%; transform: translate(-50%, -50%); }
 .pillar-pos-w  { top: 50%; left: 0%; transform: translate(-50%, -50%); }
 
-/* 12-Point Clock Positions */
-.pos-12 { top: 0; left: 50%; transform: translate(-50%, -50%); }
-.pos-1  { top: 15%; left: 85%; transform: translate(-50%, -50%); }
-.pos-2  { top: 30%; left: 95%; transform: translate(-50%, -50%); }
-.pos-3  { top: 50%; left: 100%; transform: translate(-50%, -50%); }
-.pos-4  { top: 85%; left: 85%; transform: translate(-50%, -50%); }
-.pos-6  { top: 100%; left: 50%; transform: translate(-50%, -50%); }
-.pos-7  { top: 85%; left: 15%; transform: translate(-50%, -50%); }
-.pos-8  { top: 70%; left: 5%; transform: translate(-50%, -50%); }
-.pos-9  { top: 50%; left: 0%; transform: translate(-50%, -50%); }
-.pos-10 { top: 15%; left: 15%; transform: translate(-50%, -50%); }
-
-/* --- TEXT & ANIMATIONS --- */
+/* --- CONTENT SECTIONS --- */
 .clock-title { 
     font-family: var(--header-font); 
     color: var(--primary-gold); 
     font-size: 4rem; 
-    margin-top: 60px; 
+    margin-top: 40px; 
     text-shadow: 2px 2px var(--maryland-red); 
     text-align: center;
-    letter-spacing: 2px;
 }
 
-@keyframes pulse-simple {
-    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px var(--primary-gold)); }
-    50% { transform: scale(1.08); filter: drop-shadow(0 0 15px var(--primary-gold)); }
-}
-
-/* --- RECIPE CARDS & GRIDS --- */
 .section-divider {
-    margin: 60px 0 30px;
-    border-bottom: 2px solid var(--deep-navy);
+    margin: 40px 0 20px;
+    border-bottom: 2px solid var(--maryland-red);
     padding-bottom: 10px;
+    text-align: center;
 }
 
+/* --- GRID & CARDS --- */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
     margin-bottom: 50px;
 }
 
@@ -216,33 +174,13 @@ body {
     background: var(--white);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
 }
 
-.recipe-card-full:hover {
-    transform: translateY(-5px);
-}
-
-.card-image img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 25px;
-    flex-grow: 1;
-}
-
-.cocktail-title {
-    font-family: var(--header-font);
-    font-size: 2.2rem;
-    color: var(--deep-navy);
-    margin: 5px 0 15px;
-}
+.recipe-card-full:hover { transform: translateY(-5px); }
+.card-image img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 20px; color: var(--obsidian); }
 
 .btn {
     display: block;
@@ -256,33 +194,28 @@ body {
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: var(--primary-gold);
-    color: var(--obsidian);
-}
+.btn:hover { background: var(--maryland-red); }
 
 /* --- FOOTER --- */
 .main-footer { 
     background: #000; 
     color: var(--white); 
     text-align: center; 
-    padding: 50px 0; 
+    padding: 40px 0; 
     border-top: 4px solid var(--maryland-red);
+    margin-top: auto;
 }
 
-.footer-brand { 
-    font-family: var(--header-font); 
-    font-size: 2.5rem; 
-    color: var(--primary-gold); 
+.footer-brand { font-family: var(--header-font); font-size: 2.2rem; color: var(--primary-gold); }
+
+/* --- ANIMATIONS & RESPONSIVE --- */
+@keyframes pulse-simple {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px var(--primary-gold)); }
+    50% { transform: scale(1.05); filter: drop-shadow(0 0 12px var(--primary-gold)); }
 }
 
-/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
-    .clock-wrapper { width: 300px; height: 300px; }
-    .clock-center img { width: 100px; }
-    .clock-item { width: 100px; }
-    .clock-item i { font-size: 1.8rem; }
-    .clock-item span { font-size: 0.85rem; }
-    .logo-text { font-size: 1.5rem; }
+    .clock-wrapper { width: 280px; height: 280px; }
+    .clock-center img { width: 90px; }
     .clock-title { font-size: 2.5rem; }
 }
