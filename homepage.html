@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bad Bunny Series | Bmore Foodies</title>
-    
+    <title>Bmore Foodies | Home</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-        <header class="main-header">
+    <header class="main-header">
         <div class="container nav-container">
             <a href="index.html" class="brand-link">
                 <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo" class="logo-img">
@@ -24,42 +23,50 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="baltimore.html">Everything Baltimore</a></li>
                     <li><a href="explore_baltimore.html">Explore Baltimore</a></li>
+                    <li><a href="superbowllx_cocktaillist.html">Game Day List</a></li>
                     <li><a href="test_section.html">TEST SECTION</a></li>
                     <li><a href="work.html">Work With Us</a></li>
                 </ul>
             </nav>
         </div>
-    </header> 
+    </header>
+
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1 class="clock-title">Taste the Charm City</h1>
+            <p>Exploring Baltimore's best eats and signature sips.</p>
+        </div>
+    </section>
 
     <div class="container">
-        <header class="gallery-header">
-            <h1 class="clock-title">El Conejo Malo</h1>
-            <p style="text-align: center;">Experience the flavors of the Most Wanted Tour.</p>
-        </header>
-
         <section class="team-section">
+            <h2 class="team-title">Featured Collections</h2>
             <div class="gallery-grid">
+                
                 <div class="cocktail-card">
-                    <div class="card-image"><img src="images/HennessydeCoco.jpg" alt="Hennessy de Coco"></div>
+                    <div class="card-image">
+                        <img src="images/TheGronkarita.jpg" alt="Super Bowl LX">
+                    </div>
                     <div class="card-content">
-                        <h2 class="cocktail-title">Hennessy de Coco</h2>
-                        <a href="HennessydeCoco.html" class="btn">Recipe</a>
+                        <span class="category">Event Series</span>
+                        <h2 class="cocktail-title">Super Bowl LX</h2>
+                        <p class="description">Game day recipes for the ultimate showdown.</p>
+                        <a href="superbowllx_cocktaillist.html" class="btn">Explore Menu</a>
                     </div>
                 </div>
+
                 <div class="cocktail-card">
-                    <div class="card-image"><img src="images/DákitiMule.jpg" alt="Dakiti Mule"></div>
+                    <div class="card-image">
+                        <img src="images/HennessydeCoco.jpg" alt="Bad Bunny Collection">
+                    </div>
                     <div class="card-content">
-                        <h2 class="cocktail-title">Dákiti Mule</h2>
-                        <a href="DakitiMule.html" class="btn">Recipe</a>
+                        <span class="category">Artist Series</span>
+                        <h2 class="cocktail-title">Most Wanted Tour</h2>
+                        <p class="description">Tropical cocktails inspired by Bad Bunny.</p>
+                        <a href="badbunny_cocktaillist.html" class="btn">Explore Menu</a>
                     </div>
                 </div>
-                <div class="cocktail-card">
-                    <div class="card-image"><img src="images/BadJohnnie.jpg" alt="Bad Johnnie"></div>
-                    <div class="card-content">
-                        <h2 class="cocktail-title">Bad Johnnie</h2>
-                        <a href="BadJohnnie.html" class="btn">Recipe</a>
-                    </div>
-                </div>
+
             </div>
         </section>
     </div>
@@ -67,6 +74,10 @@
     <footer class="main-footer">
         <div class="footer-brand">BMORE FOODIES</div>
         <p>&copy; 2026 Savory & Sweet Media</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
     </footer>
 </body>
 </html>
