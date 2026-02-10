@@ -3,43 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Received | Bmore Foodies</title>
+    <title>Thank You | BMORE Foodies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --maryland-red: #bf0d2c;
+            --deep-navy: #001f3f;
+            --glow-color: rgba(191, 13, 44, 0.6);
+        }
+
+        .thanks-page-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* --- YOUR REQUESTED CLOCK STRUCTURE --- */
+        .clock-wrapper {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .clock-center {
+            width: 160px;
+            height: 160px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid var(--deep-navy);
+            /* Glowing Effect */
+            box-shadow: 0 0 20px var(--glow-color);
+            animation: pulse-glow 2.5s infinite ease-in-out;
+            z-index: 2;
+        }
+
+        .clock-center img {
+            width: 75%;
+            height: auto;
+        }
+
+        /* Glow Animation */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 15px var(--glow-color); transform: scale(1); }
+            50% { box-shadow: 0 0 45px var(--glow-color), 0 0 70px rgba(191, 13, 44, 0.2); transform: scale(1.03); }
+            100% { box-shadow: 0 0 15px var(--glow-color); transform: scale(1); }
+        }
+
+        /* Typography */
+        .cheers-text {
+            font-family: var(--header-font);
+            font-size: 5rem;
+            color: var(--deep-navy);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .sub-text {
+            font-family: 'Inter', sans-serif;
+            color: #555;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            max-width: 450px;
+        }
+
+        /* The Crab Home Button */
+        .back-home {
+            margin-top: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 30px;
+            background: var(--deep-navy);
+            color: white;
+            text-decoration: none;
+            font-family: var(--header-font);
+            font-size: 1.4rem;
+            border-radius: 4px; /* Matching your site's sharp corners */
+            transition: 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: var(--maryland-red);
+            transform: translateY(-2px);
+        }
+
+        .crab-icon {
+            font-size: 1.6rem;
+        }
+
+        /* Crab scuttle animation on hover */
+        .back-home:hover .crab-icon {
+            animation: scuttle 0.4s infinite alternate ease-in-out;
+        }
+
+        @keyframes scuttle {
+            from { transform: translateX(-4px) rotate(-10deg); }
+            to { transform: translateX(4px) rotate(10deg); }
+        }
+    </style>
 </head>
-<body>
+<body style="background-color: var(--vintage-parchment);">
+
     <header class="main-header">
         <div class="container nav-container">
-            <a href="homepage.html" class="brand-link">
+            <a href="index.html" class="brand-link">
+                <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo" class="logo-img">
                 <span class="logo-text">BMORE FOODIES</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="baltimore.html">Baltimore</a></li>
-            </ul>
         </div>
     </header>
 
-    <main class="container" style="display: flex; align-items: center; justify-content: center; min-height: 70vh;">
-        <div class="cocktail-card" style="max-width: 450px; text-align: center; padding: 40px;">
-            <div class="success-icon" style="font-size: 4rem; color: #28a745; margin-bottom: 20px;">
-                <i class="fas fa-check-circle"></i>
+    <main class="thanks-page-wrapper">
+        
+        <div class="clock-wrapper">
+            <a href="index.html" class="clock-center">
+                <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo">
+            </a>
             </div>
+
             
-            <h1 class="clock-title" style="margin-bottom: 10px;">Cheers!</h1>
-            <h2 style="font-size: 1.2rem; color: #333; margin-bottom: 20px;">Your message is in our inbox.</h2>
-            
-            <p class="description" style="margin-bottom: 30px;">
-                Thanks for reaching out to Bmore Foodies. Whether it's a partnership or a recipe tip, we'll get back to you faster than you can shake a martini.
-            </p>
-            
-            <a href="homepage.html" class="btn" style="display: inline-block;">Return Home</a>
         </div>
+        <h1 class="cheers-text">CHEERS!</h1>
+        <p class="sub-text">Thanks for reaching out. We've received your inquiry and will get back to you faster than a crab on a hot dock!</p>
+        
+        <a href="index.html" class="back-home">
+            <span class="crab-icon">🦀</span>
+            SCUTTLE BACK HOME
+        </a>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-brand">BMORE FOODIES</div>
-        <p>&copy; 2026 Savory & Sweet Media</p>
+    <footer class="main-footer" style="padding: 30px 0;">
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2026 BMORE Foodies. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
