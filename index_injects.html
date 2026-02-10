@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home | BMORE Foodies</title>
+    
+    <div id="head-placeholder"></div>
+</head>
+<body style="background-color: var(--vintage-parchment);">
+
+    <div id="nav-placeholder"></div>
+
+    <main>
+        <section class="container" style="padding: 100px 20px; text-align: center;">
+            <h1 style="font-family: var(--header-font); font-size: 4rem;">Welcome to Baltimore</h1>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                });
+        }
+
+        // Run the injections
+        loadComponent('head-placeholder', 'head-template.html');
+        loadComponent('nav-placeholder', 'nav.html');
+        loadComponent('footer-placeholder', 'footer.html');
+    </script>
+</body>
+</html>

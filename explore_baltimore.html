@@ -39,28 +39,9 @@
         <h1 class="clock-title">Explore Baltimore</h1>
     </main>
 
-    <div id="footer-placeholder"></div>
+        <div id="footer-placeholder"></div>
 
-    <script>
-        // Enhanced function to handle head content specifically
-        function loadComponent(id, file, isHead = false) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => {
-                    if (isHead) {
-                        // Append to head instead of a div to keep HTML valid
-                        document.head.insertAdjacentHTML('beforeend', data);
-                    } else {
-                        document.getElementById(id).innerHTML = data;
-                    }
-                });
-        }
-
-        // Run the injections
-        loadComponent('head-placeholder', 'head-template.html', true);
-        loadComponent('nav-placeholder', 'nav.html');
-        loadComponent('footer-placeholder', 'footer.html');
-    </script>
+    <script src="loader.js"></script>
 
 </body>
 </html>
