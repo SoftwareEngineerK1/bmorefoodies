@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're In! | Bmore Foodies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- BRAND VARIABLES --- */
+        :root {
+            --primary-gold: #F2B705;
+            --deep-navy: #003865;
+            --maryland-red: #BD1622;
+            --vintage-parchment: #DEDCB3; 
+            --obsidian: #1A1A1A;
+            --white: #FFFFFF;
+            --header-font: 'Bebas Neue', sans-serif;
+            --body-font: 'Inter', sans-serif;
+        }
+
+        /* --- RESET & BASE --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--vintage-parchment);
+            color: var(--obsidian);
+            font-family: var(--body-font);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- HEADER --- */
+        .main-header {
+            background-color: var(--deep-navy);
+            padding: 1rem 0;
+            border-bottom: 4px solid var(--maryland-red);
+            text-align: center;
+        }
+
+        .logo-text {
+            font-family: var(--header-font);
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        /* --- SUCCESS CONTENT --- */
+        .content-wrapper {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .success-card {
+            background-color: var(--white);
+            max-width: 500px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 12px;
+            border: 3px solid var(--maryland-red);
+            box-shadow: 10px 10px 0px var(--deep-navy);
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            filter: drop-shadow(2px 2px 0px var(--maryland-red));
+        }
+
+        .success-card h1 {
+            font-family: var(--header-font);
+            font-size: 3.5rem;
+            color: var(--deep-navy);
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .success-card p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* --- BUTTONS --- */
+        .home-btn {
+            display: inline-block;
+            background-color: var(--deep-navy);
+            color: var(--white);
+            font-family: var(--header-font);
+            font-size: 1.8rem;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background-color: var(--maryland-red);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- FOOTER --- */
+        .main-footer {
+            background: var(--obsidian);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+            border-top: 4px solid var(--maryland-red);
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            font-family: var(--header-font);
+            color: var(--primary-gold);
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="index.html" class="logo-text">BMORE FOODIES</a>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="success-card">
+            <div class="success-icon">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <h1>Order Confirmed!</h1>
+            <p>Well, technically your subscription is confirmed. Keep an eye on your inbox for the freshest Baltimore food news.</p>
+            
+            <a href="index.html" class="home-btn">Back to the Feast</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-logo">BMORE FOODIES</div>
+        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">&copy; 2026 Bmore Foodies | Stay Hungry</p>
+    </footer>
+
+</body>
+</html>
