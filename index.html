@@ -1,176 +1,73 @@
-/* BMORE FOODIES - Master Stylesheet (2026) */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bmore Foodies | Baltimore's Best Eats</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="clock-page-body">
 
-/* --- ROOT VARIABLES --- */
-:root {
-  --primary-gold: #F2B705;
-  --deep-navy: #003865;
-  --maryland-red: #BD1622;
-  --sky-blue: #48A9D6;
-  --vintage-parchment: #DEDCB3; 
-  --obsidian: #1A1A1A;
-  --white: #FFFFFF;
-  --header-font: 'Bebas Neue', sans-serif;
-  --body-font: 'Inter', sans-serif;
-}
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-link">
+                <span class="logo-text">BMORE FOODIES</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#subscribe">Join the Club</a></li>
+            </ul>
+        </div>
+    </header>
 
-/* --- RESET & BASE --- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+    <main class="clock-container">
+        <h1 class="clock-title">STAY HUNGRY BALTIMORE</h1>
+        
+        <div class="clock-wrapper">
+            <div class="clock-center">
+                <img src="logo.png" alt="Bmore Foodies Logo">
+            </div>
+            
+            <a href="#" class="clock-item pillar-pos-n">
+                <i class="fas fa-utensils"></i>
+                <span>RESTAURANTS</span>
+            </a>
+            <a href="#" class="clock-item pillar-pos-e">
+                <i class="fas fa-cocktail"></i>
+                <span>DRINKS</span>
+            </a>
+            <a href="#" class="clock-item pillar-pos-s">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>NEIGHBORHOODS</span>
+            </a>
+            <a href="#" class="clock-item pillar-pos-w">
+                <i class="fas fa-calendar-alt"></i>
+                <span>EVENTS</span>
+            </a>
+        </div>
+    </main>
 
-body {
-    background-color: var(--vintage-parchment);
-    color: var(--obsidian);
-    font-family: var(--body-font);
-    line-height: 1.6;
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+    <section id="subscribe" class="subscription-section">
+        <div class="form-wrapper">
+            <h2>Get the Daily Special</h2>
+            <p>The best of Baltimore food scene, delivered to your inbox.</p>
+            
+            <form name="bmore-newsletter" method="POST" data-netlify="true">
+                <input type="text" name="name" placeholder="Name" class="bmore-input" required>
+                <input type="email" name="email" placeholder="Email" class="bmore-input" required>
+                <button type="submit" class="bmore-btn">SIGN ME UP</button>
+            </form>
+        </div>
+    </section>
 
-.clock-page-body { background-color: var(--obsidian); color: var(--white); }
+    <footer class="main-footer">
+        <div class="footer-brand">BMORE FOODIES</div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2026 Bmore Foodies. All Rights Reserved.</p>
+    </footer>
 
-/* --- CONTAINERS --- */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-/* --- HEADER & NAVIGATION --- */
-.main-header {
-    background-color: var(--deep-navy);
-    padding: 0.8rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 4px solid var(--maryland-red);
-}
-
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.brand-link { text-decoration: none; display: flex; align-items: center; gap: 12px; }
-.logo-img { height: 55px; width: auto; }
-.logo-text { font-family: var(--header-font); font-size: 2.2rem; color: var(--primary-gold); letter-spacing: 2px; }
-.nav-links { list-style: none; display: flex; gap: 20px; }
-.nav-links a { color: var(--white); text-decoration: none; font-family: var(--header-font); font-size: 1.1rem; text-transform: uppercase; transition: 0.3s; }
-.nav-links a:hover { color: var(--primary-gold); }
-
-/* --- FORM STYLES (NEW) --- */
-.subscription-section {
-    padding: 60px 20px;
-    background-color: var(--obsidian);
-    color: var(--white);
-    text-align: center;
-    border-top: 4px solid var(--primary-gold);
-}
-
-.form-wrapper {
-    max-width: 500px;
-    margin: 20px auto;
-    background: var(--deep-navy);
-    padding: 30px;
-    border-radius: 8px;
-    border: 2px solid var(--maryland-red);
-}
-
-.form-wrapper h2 {
-    font-family: var(--header-font);
-    font-size: 2.5rem;
-    color: var(--primary-gold);
-    margin-bottom: 10px;
-}
-
-.bmore-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 2px solid var(--vintage-parchment);
-    background: var(--white);
-    font-family: var(--body-font);
-    font-size: 1rem;
-}
-
-.bmore-btn {
-    width: 100%;
-    background-color: var(--maryland-red);
-    color: var(--white);
-    font-family: var(--header-font);
-    font-size: 1.5rem;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-
-.bmore-btn:hover {
-    background-color: var(--primary-gold);
-    color: var(--deep-navy);
-}
-
-/* --- THE CLOCK NAVIGATION --- */
-.clock-container { padding: 40px 0; flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-
-.clock-wrapper {
-    position: relative;
-    width: 450px;
-    height: 450px;
-    margin: 60px auto 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.clock-center img {
-    width: 130px;
-    height: auto;
-    animation: pulse-simple 3s infinite ease-in-out;
-}
-
-.clock-item {
-    position: absolute;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--white);
-    transition: all 0.3s ease;
-    width: 125px;
-    text-align: center;
-}
-
-.clock-item i { font-size: 2.2rem; color: var(--primary-gold); margin-bottom: 8px; transition: 0.3s; }
-.clock-item span { font-family: var(--header-font); font-size: 1.1rem; letter-spacing: 1px; }
-
-.clock-item:hover i {
-    color: var(--maryland-red);
-    filter: drop-shadow(0 0 10px var(--maryland-red));
-    transform: scale(1.2);
-}
-
-/* Gallery Grid Images */
-.card-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    background-color: #f4f4f4;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #040404;
-}
-
-/* --- FOOTER --- */
-.main-footer { background: #000; color: var(--white); text-align: center; padding: 40px 0; border-top: 4px solid var(--maryland-red); margin-top: auto; }
-.footer-brand { font-family: var(--header-font); font-size: 2.2rem; color: var(--primary-gold); }
-.social-links { margin: 15px 0; display: flex; justify-content: center; gap: 20px; }
-.social-links a { color: var(--white); font-size: 1.5rem; }
-
-@keyframes pulse-simple {
-    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px var(--primary-gold)); }
-    50% { transform: scale(1.05); filter: drop-shadow(0 0 12px var(--primary-gold)); }
-}
-
-@media (max-width: 768px) {
-    .clock-wrapper { width: 300px; height: 300px; }
-    .clock-center img { width: 90px; }
-    .clock-title { font-size: 2.5rem; }
-}
+</body>
+</html>
