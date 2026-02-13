@@ -50,6 +50,59 @@ body {
 .nav-links a { color: var(--white); text-decoration: none; font-family: var(--header-font); font-size: 1.1rem; text-transform: uppercase; transition: 0.3s; }
 .nav-links a:hover { color: var(--primary-gold); }
 
+/* --- FORM STYLES (NEW) --- */
+.subscription-section {
+    padding: 60px 20px;
+    background-color: var(--obsidian);
+    color: var(--white);
+    text-align: center;
+    border-top: 4px solid var(--primary-gold);
+}
+
+.form-wrapper {
+    max-width: 500px;
+    margin: 20px auto;
+    background: var(--deep-navy);
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid var(--maryland-red);
+}
+
+.form-wrapper h2 {
+    font-family: var(--header-font);
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
+
+.bmore-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--vintage-parchment);
+    background: var(--white);
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.bmore-btn {
+    width: 100%;
+    background-color: var(--maryland-red);
+    color: var(--white);
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.bmore-btn:hover {
+    background-color: var(--primary-gold);
+    color: var(--deep-navy);
+}
+
 /* --- THE CLOCK NAVIGATION --- */
 .clock-container { padding: 40px 0; flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 
@@ -90,14 +143,10 @@ body {
     transform: scale(1.2);
 }
 
-
-
-
-
-/* Update the Gallery Grid Images (The List Pages) */
+/* Gallery Grid Images */
 .card-image {
     width: 100%;
-    height: 200px; /* Reduced from 300px+ to make them more compact */
+    height: 200px;
     overflow: hidden;
     background-color: #f4f4f4;
 }
@@ -106,63 +155,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
- background: #040404;
-}
-
-/* Update the Individual Recipe Page Images (The Focus Pages) */
-.recipe-focus-wrapper .cocktail-card {
-    max-width: 600px; /* Keeps the card itself from getting too wide */
-    margin: 40px auto;
-}
-
-.recipe-focus-wrapper .card-image {
-    height: 350px; /* Smaller height for the main recipe photo */
-}
-
-/* Optional: Add a hover effect to make the smaller images feel interactive */
-.cocktail-card:hover .card-image img {
-    transform: scale(1.05);
-}
-
-
-
-
-/* --- POSITIONING SYSTEM --- */
-
-/* 4 Pillars (N, E, S, W) */
-.pillar-pos-n { top: 0%; left: 50%; transform: translate(-50%, -50%); }
-.pillar-pos-e { top: 50%; left: 100%; transform: translate(-50%, -50%); }
-.pillar-pos-s { top: 100%; left: 50%; transform: translate(-50%, -50%); }
-.pillar-pos-w { top: 50%; left: 0%; transform: translate(-50%, -50%); }
-
-/* 12-Point Clock (For baltimore.html) */
-.pos-12 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
-.pos-1  { top: 6.7%; left: 75%; transform: translate(-50%, -50%); }
-.pos-3  { top: 50%; left: 100%; transform: translate(-50%, -50%); }
-.pos-4  { top: 93.3%; left: 75%; transform: translate(-50%, -50%); }
-.pos-6  { top: 100%; left: 50%; transform: translate(-50%, -50%); }
-.pos-7  { top: 93.3%; left: 25%; transform: translate(-50%, -50%); }
-.pos-9  { top: 50%; left: 0%; transform: translate(-50%, -50%); }
-.pos-10 { top: 6.7%; left: 25%; transform: translate(-50%, -50%); }
-
-
-
-/* --- 5-ITEM PENTAGON SYSTEM --- */
-.five-pos-1 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
-.five-pos-2 { top: 34.5%; left: 95%; transform: translate(-50%, -50%); }
-.five-pos-3 { top: 90.5%; left: 79%; transform: translate(-50%, -50%); }
-.five-pos-4 { top: 90.5%; left: 21%; transform: translate(-50%, -50%); }
-.five-pos-5 { top: 34.5%; left: 5%; transform: translate(-50%, -50%); }
-
-
-
-/* --- TITLES --- */
-.clock-title { 
-    font-family: var(--header-font); 
-    color: var(--primary-gold); 
-    font-size: 4rem; 
-    text-shadow: 2px 2px var(--maryland-red); 
-    text-align: center;
+  background: #040404;
 }
 
 /* --- FOOTER --- */
@@ -181,4 +174,3 @@ body {
     .clock-center img { width: 90px; }
     .clock-title { font-size: 2.5rem; }
 }
-
