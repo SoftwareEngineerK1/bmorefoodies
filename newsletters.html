@@ -4,188 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter | Bmore Foodies</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* --- BRAND VARIABLES --- */
-        :root {
-            --primary-gold: #F2B705;
-            --deep-navy: #003865;
-            --maryland-red: #BD1622;
-            --vintage-parchment: #DEDCB3; 
-            --obsidian: #1A1A1A;
-            --white: #FFFFFF;
-            --header-font: 'Bebas Neue', sans-serif;
-            --body-font: 'Inter', sans-serif;
-        }
-
-        /* --- RESET & BASE --- */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            background-color: var(--vintage-parchment);
-            color: var(--obsidian);
-            font-family: var(--body-font);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* --- HEADER --- */
-        .main-header {
-            background-color: var(--deep-navy);
-            padding: 1rem 0;
-            border-bottom: 4px solid var(--maryland-red);
-            text-align: center;
-        }
-
-        .logo-text {
-            font-family: var(--header-font);
-            font-size: 2.5rem;
-            color: var(--primary-gold);
-            letter-spacing: 2px;
-            text-decoration: none;
-        }
-
-        /* --- MAIN CONTENT --- */
-        .content-wrapper {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-        }
-
-        .newsletter-card {
-            background-color: var(--white);
-            max-width: 500px;
-            width: 100%;
-            padding: 40px;
-            border-radius: 12px;
-            border: 3px solid var(--deep-navy);
-            box-shadow: 10px 10px 0px var(--maryland-red);
-            text-align: center;
-        }
-
-        .newsletter-card i {
-            font-size: 3.5rem;
-            color: var(--maryland-red);
-            margin-bottom: 20px;
-        }
-
-        .newsletter-card h1 {
-            font-family: var(--header-font);
-            font-size: 3rem;
-            color: var(--deep-navy);
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-
-        .newsletter-card p {
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-            color: #444;
-        }
-
-        /* --- FORM STYLES --- */
-        .bmore-input {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-family: var(--body-font);
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .bmore-input:focus {
-            border-color: var(--deep-navy);
-        }
-
-        .subscribe-btn {
-            width: 100%;
-            background-color: var(--maryland-red);
-            color: var(--white);
-            font-family: var(--header-font);
-            font-size: 1.8rem;
-            padding: 12px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-
-        .subscribe-btn:hover {
-            background-color: var(--primary-gold);
-            color: var(--deep-navy);
-            transform: translateY(-2px);
-        }
-
-        /* --- FOOTER --- */
-        .main-footer {
-            background: var(--obsidian);
-            color: var(--white);
-            text-align: center;
-            padding: 30px 0;
-            border-top: 4px solid var(--maryland-red);
-            margin-top: auto;
-        }
-
-        .footer-logo {
-            font-family: var(--header-font);
-            color: var(--primary-gold);
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            font-size: 1.5rem;
-        }
-
-        .social-links a { color: var(--white); }
-        .social-links a:hover { color: var(--primary-gold); }
-
-        @media (max-width: 480px) {
-            .newsletter-card { padding: 25px; }
-            .newsletter-card h1 { font-size: 2.2rem; }
-        }
-    </style>
 </head>
 <body>
 
     <header class="main-header">
-        <a href="index.html" class="logo-text">BMORE FOODIES</a>
+        <div class="container nav-container">
+            <a href="index.html" class="brand-link">
+                <span class="logo-text">BMORE FOODIES</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="baltimore.html">Explore</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="content-wrapper">
-        <div class="newsletter-card">
-            <i class="fas fa-envelope-open-text"></i>
-            <h1>The Daily Bite</h1>
-            <p>Hungry for more? Get Baltimore's best secret menus and foodie events delivered to your inbox.</p>
+    <main class="auth-wrapper">
+        <div class="auth-card">
+            <h2>The Weekly Bite</h2>
+            <p style="text-align: center; margin-bottom: 20px; font-size: 0.95rem;">
+                Get the best Baltimore eats, secret recipes, and local food news delivered to your inbox.
+            </p>
+            
+            <form action="thank-you.html" method="GET"> <div class="form-group">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="name" placeholder="Hon..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" id="email-address" name="email" placeholder="you@example.com" required>
+                </div>
 
-            <form name="bmore-newsletter-v2" method="POST" data-netlify="true" action="/thank-you.html">
-                <input type="text" name="name" placeholder="First Name" class="bmore-input" required>
-                <input type="email" name="email" placeholder="Email Address" class="bmore-input" required>
-                <button type="submit" class="subscribe-btn">STAY HUNGRY</button>
+                <div class="form-group">
+                    <label>Interest Area</label>
+                    <select style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; font-family: var(--body-font);">
+                        <option>New Restaurant Openings</option>
+                        <option>Cocktail & Drink Recipes</option>
+                        <option>Classic Maryland Dishes</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary">Subscribe</button>
             </form>
+
+            <p class="disclosure">No spam, just Old Bay-scented goodness. <br><small>Enjoy the Website.</small></p>
         </div>
-    </div>
+    </main>
 
     <footer class="main-footer">
-        <div class="footer-logo">BMORE FOODIES</div>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
+        <div class="container">
+            <div class="footer-brand">BMORE FOODIES</div>
+            <p>&copy; 2026 Charm City Eats</p>
         </div>
-        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">&copy; 2026 Bmore Foodies</p>
     </footer>
 
 </body>
