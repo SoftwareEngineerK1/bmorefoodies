@@ -1,48 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>BMORE Foodies | Baltimore's Best Eats</title>
+/* BMORE FOODIES - Master Stylesheet (2026) */
 
-    <div id="head-placeholder"></div>
-    </head>
+/* --- ROOT VARIABLES --- */
+:root {
+  --primary-gold: #F2B705;
+  --deep-navy: #003865;
+  --maryland-red: #BD1622;
+  --sky-blue: #48A9D6;
+  --vintage-parchment: #DEDCB3; 
+  --obsidian: #1A1A1A;
+  --white: #FFFFFF;
+  --header-font: 'Bebas Neue', sans-serif;
+  --body-font: 'Inter', sans-serif;
+}
 
-<body class="clock-page-body">
+/* --- RESET & BASE --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-        <div id="nav-placeholder"></div>
+body {
+    background-color: var(--vintage-parchment);
+    color: var(--obsidian);
+    font-family: var(--body-font);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-    <main class="clock-container">
-        <div class="clock-wrapper">
-            <div class="clock-center">
-                <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo">
-            </div>
+.clock-page-body { background-color: var(--obsidian); color: var(--white); }
 
-            <a href="eat_drink.html" class="clock-item pillar-pos-n">
-                <i class="fas fa-utensils"></i>
-                <span>Eat & Drink</span>
-            </a>
+/* --- CONTAINERS --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-            <a href="play_explore.html" class="clock-item pillar-pos-e">
-                <i class="fas fa-map-marked-alt"></i>
-                <span>Play & Explore</span>
-            </a>
+/* --- HEADER & NAVIGATION --- */
+.main-header {
+    background-color: var(--deep-navy);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid var(--maryland-red);
+}
 
-            <a href="things_to_do.html" class="clock-item pillar-pos-s">
-                <i class="fas fa-calendar-check"></i>
-                <span>Things To Do</span>
-            </a>
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.brand-link { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+.logo-img { height: 55px; width: auto; }
+.logo-text { font-family: var(--header-font); font-size: 2.2rem; color: var(--primary-gold); letter-spacing: 2px; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { color: var(--white); text-decoration: none; font-family: var(--header-font); font-size: 1.1rem; text-transform: uppercase; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary-gold); }
 
-            <a href="local_services.html" class="clock-item pillar-pos-w">
-                <i class="fas fa-concierge-bell"></i>
-                <span>Local Services</span>
-            </a>
-        </div>
-        
-        <h1 class="clock-title">Explore Baltimore</h1>
-    </main>
+/* --- FORM STYLES (NEW) --- */
+.subscription-section {
+    padding: 60px 20px;
+    background-color: var(--obsidian);
+    color: var(--white);
+    text-align: center;
+    border-top: 4px solid var(--primary-gold);
+}
 
-   <div id="footer-placeholder"></div>
+.form-wrapper {
+    max-width: 500px;
+    margin: 20px auto;
+    background: var(--deep-navy);
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid var(--maryland-red);
+}
 
-    <script src="loader.js"></script>
+.form-wrapper h2 {
+    font-family: var(--header-font);
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
 
-</body>
-</html>
+.bmore-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--vintage-parchment);
+    background: var(--white);
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.bmore-btn {
+    width: 100%;
+    background-color: var(--maryland-red);
+    color: var(--white);
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.bmore-btn:hover {
+    background-color: var(--primary-gold);
+    color: var(--deep-navy);
+}
+
+/* --- THE CLOCK NAVIGATION --- */
+.clock-container { padding: 40px 0; flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.clock-wrapper {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 60px auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-center img {
+    width: 130px;
+    height: auto;
+    animation: pulse-simple 3s infinite ease-in-out;
+}
+
+.clock-item {
+    position: absolute;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    transition: all 0.3s ease;
+    width: 125px;
+    text-align: center;
+}
+
+.clock-item i { font-size: 2.2rem; color: var(--primary-gold); margin-bottom: 8px; transition: 0.3s; }
+.clock-item span { font-family: var(--header-font); font-size: 1.1rem; letter-spacing: 1px; }
+
+.clock-item:hover i {
+    color: var(--maryland-red);
+    filter: drop-shadow(0 0 10px var(--maryland-red));
+    transform: scale(1.2);
+}
+
+/* Gallery Grid Images */
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #040404;
+}
+
+/* --- FOOTER --- */
+.main-footer { background: #000; color: var(--white); text-align: center; padding: 40px 0; border-top: 4px solid var(--maryland-red); margin-top: auto; }
+.footer-brand { font-family: var(--header-font); font-size: 2.2rem; color: var(--primary-gold); }
+.social-links { margin: 15px 0; display: flex; justify-content: center; gap: 20px; }
+.social-links a { color: var(--white); font-size: 1.5rem; }
+
+@keyframes pulse-simple {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px var(--primary-gold)); }
+    50% { transform: scale(1.05); filter: drop-shadow(0 0 12px var(--primary-gold)); }
+}
+
+@media (max-width: 768px) {
+    .clock-wrapper { width: 300px; height: 300px; }
+    .clock-center img { width: 90px; }
+    .clock-title { font-size: 2.5rem; }
+}
