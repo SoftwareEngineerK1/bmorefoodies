@@ -133,6 +133,7 @@
             text-align: center;
             padding: 30px 0;
             border-top: 4px solid var(--maryland-red);
+            margin-top: auto;
         }
 
         .footer-logo {
@@ -170,7 +171,7 @@
             <h1>The Daily Bite</h1>
             <p>Hungry for more? Get Baltimore's best secret menus and foodie events delivered to your inbox.</p>
 
-            <form name="bmore-newsletter-v2" method="POST" data-netlify="true">
+            <form name="bmore-newsletter-v2" method="POST" data-netlify="true" action="/thank_you.html">
                 <input type="text" name="name" placeholder="First Name" class="bmore-input" required>
                 <input type="email" name="email" placeholder="Email Address" class="bmore-input" required>
                 <button type="submit" class="subscribe-btn">STAY HUNGRY</button>
