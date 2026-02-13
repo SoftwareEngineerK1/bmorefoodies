@@ -1,73 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bmore Foodies | Baltimore's Best Eats</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+    <title>BMORE Foodies | Baltimore's Best Eats</title>
+
+    <div id="head-placeholder"></div>
+    </head>
+
 <body class="clock-page-body">
 
-    <header class="main-header">
-        <div class="container nav-container">
-            <a href="index.html" class="brand-link">
-                <span class="logo-text">BMORE FOODIES</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#subscribe">Join the Club</a></li>
-            </ul>
-        </div>
-    </header>
+        <div id="nav-placeholder"></div>
 
     <main class="clock-container">
-        <h1 class="clock-title">STAY HUNGRY BALTIMORE</h1>
-        
         <div class="clock-wrapper">
             <div class="clock-center">
-                <img src="logo.png" alt="Bmore Foodies Logo">
+                <img src="images/bmorefoodies.png" alt="BMORE Foodies Logo">
             </div>
-            
-            <a href="#" class="clock-item pillar-pos-n">
+
+            <a href="eat_drink.html" class="clock-item pillar-pos-n">
                 <i class="fas fa-utensils"></i>
-                <span>RESTAURANTS</span>
+                <span>Eat & Drink</span>
             </a>
-            <a href="#" class="clock-item pillar-pos-e">
-                <i class="fas fa-cocktail"></i>
-                <span>DRINKS</span>
+
+            <a href="play_explore.html" class="clock-item pillar-pos-e">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Play & Explore</span>
             </a>
-            <a href="#" class="clock-item pillar-pos-s">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>NEIGHBORHOODS</span>
+
+            <a href="things_to_do.html" class="clock-item pillar-pos-s">
+                <i class="fas fa-calendar-check"></i>
+                <span>Things To Do</span>
             </a>
-            <a href="#" class="clock-item pillar-pos-w">
-                <i class="fas fa-calendar-alt"></i>
-                <span>EVENTS</span>
+
+            <a href="local_services.html" class="clock-item pillar-pos-w">
+                <i class="fas fa-concierge-bell"></i>
+                <span>Local Services</span>
             </a>
         </div>
+        
+        <h1 class="clock-title">Explore Baltimore</h1>
     </main>
 
-    <section id="subscribe" class="subscription-section">
-        <div class="form-wrapper">
-            <h2>Get the Daily Special</h2>
-            <p>The best of Baltimore food scene, delivered to your inbox.</p>
-            
-            <form name="bmore-newsletter" method="POST" data-netlify="true">
-                <input type="text" name="name" placeholder="Name" class="bmore-input" required>
-                <input type="email" name="email" placeholder="Email" class="bmore-input" required>
-                <button type="submit" class="bmore-btn">SIGN ME UP</button>
-            </form>
-        </div>
-    </section>
+   <div id="footer-placeholder"></div>
 
-    <footer class="main-footer">
-        <div class="footer-brand">BMORE FOODIES</div>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-        </div>
-        <p>&copy; 2026 Bmore Foodies. All Rights Reserved.</p>
-    </footer>
+    <script src="loader.js"></script>
 
 </body>
 </html>
